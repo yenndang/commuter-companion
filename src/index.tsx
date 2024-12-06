@@ -8,6 +8,7 @@ import StressReliefActivities from "./components/StressRelief";
 import MusicRecommendation from "./components/MusicRecommendation";
 import MyCommute from "./components/MyCommute";
 import MoodTracker from "./components/MoodTracker";
+import SettingsScreen from "./components/SettingsScreen";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -20,6 +21,7 @@ root.render(
     <MusicRecommendation />
     <MyCommute />
     <MoodTracker />
+    <SettingsScreen />
   </React.StrictMode>
 );
 
