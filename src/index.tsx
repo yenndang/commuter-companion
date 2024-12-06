@@ -4,6 +4,10 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import HomeScreen from "./components/HomeScreen";
+import StressReliefActivities from "./components/StressRelief";
+import MusicRecommendation from "./components/MusicRecommendation";
+import MyCommute from "./components/MyCommute";
+import MoodTracker from "./components/MoodTracker";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -12,6 +16,10 @@ root.render(
   <React.StrictMode>
     <App />
     <HomeScreen />
+    <StressReliefActivities />
+    <MusicRecommendation />
+    <MyCommute />
+    <MoodTracker />
   </React.StrictMode>
 );
 
