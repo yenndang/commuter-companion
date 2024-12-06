@@ -61,7 +61,7 @@ const StressReliefActivities: React.FC = () => {
            {/* Link to Good News web page */}
           <iframe
             title="Good News Network"
-            src="https://www.goodnewsnetwork.org"
+            src="https://www.goodnewsnetwork.org/category/news/"
             width="100%"
             height="100%"
             style={{border: 'none'}}
