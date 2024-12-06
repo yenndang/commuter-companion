@@ -11,8 +11,11 @@ import {
   faMusic,
   faTrain,
 } from "@fortawesome/free-solid-svg-icons";
+import NavigationBar from "./misc/NavigationBar";
+import { useNavigate } from "react-router-dom";
 
 const HomeScreen: React.FC = () => {
+  const navigate = useNavigate(); // Initialize navigate function
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
       {/* Phone Container */}
@@ -22,7 +25,8 @@ const HomeScreen: React.FC = () => {
           <h1 className="text-3xl font-bold">Commuter Companion</h1>
           <FontAwesomeIcon
             icon={faCog}
-            className="text-gray-500 text-2xl pt-1"
+            className="text-gray-500 text-2xl pt-1 cursor-pointer"
+            onClick={() => navigate("/settings")}
           />
         </div>
 
@@ -127,41 +131,7 @@ const HomeScreen: React.FC = () => {
         </div>
 
         {/* Footer Navigation */}
-        <div className="bg-white p-2 flex justify-around border-t border-gray-200 sticky bottom-0 z-10">
-          <div className="flex flex-col items-center">
-            <div className="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-md">
-              <FontAwesomeIcon
-                icon={faSmile}
-                className="text-xl text-gray-600"
-              />
-            </div>
-            <p className="mt-1 text-gray-600 text-[10px]">Mood</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-md">
-              <FontAwesomeIcon
-                icon={faHeartbeat}
-                className="text-xl text-gray-600"
-              />
-            </div>
-            <p className="mt-1 text-gray-600 text-[10px]">Stress</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-md">
-              <FontAwesomeIcon
-                icon={faMusic}
-                className="text-xl text-gray-600"
-              />
-            </div>
-            <p className="mt-1 text-gray-600 text-[10px]">Music</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-md">
-              <FontAwesomeIcon icon={faBus} className="text-xl text-gray-600" />
-            </div>
-            <p className="mt-1 text-gray-600 text-[10px]">MyCommute</p>
-          </div>
-        </div>
+        <NavigationBar />
       </div>
     </div>
   );

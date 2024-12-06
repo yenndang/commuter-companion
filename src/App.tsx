@@ -1,26 +1,23 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import HomeScreen from "./components/HomeScreen";
+import MyCommute from "./components/MyCommute";
+import MoodTracker from "./components/MoodTracker";
+import StressRelief from "./components/StressRelief";
+import MusicRecommendation from "./components/MusicRecommendation";
+import SettingsScreen from "./components/SettingsScreen";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-    </div>
+    <Routes>
+      <Route path="/" element={<HomeScreen />} />
+      <Route path="/my-commute" element={<MyCommute />} />
+      <Route path="/mood-tracker" element={<MoodTracker />} />
+      <Route path="/stress-relief" element={<StressRelief />} />
+      <Route path="/music-recommendation" element={<MusicRecommendation />} />
+      <Route path="/settings" element={<SettingsScreen />} />
+    </Routes>
   );
-}
+};
 
 export default App;

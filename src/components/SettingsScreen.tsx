@@ -6,6 +6,7 @@ import {
   faBell,
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import BackToHomeButton from "./misc/BackToHomeButton";
 
 const SettingsScreen: React.FC = () => {
   return (
@@ -14,10 +15,7 @@ const SettingsScreen: React.FC = () => {
       <div className="w-[300px] h-[650px] bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-300 flex flex-col">
         {/* Header */}
         <div className="p-4 bg-white sticky top-0 z-10">
-          <FontAwesomeIcon
-            icon={faArrowLeft}
-            className="text-gray-500 text-2xl mb-4"
-          />
+          <BackToHomeButton />
           <h1 className="text-2xl font-bold text-center">Settings</h1>
         </div>
 
