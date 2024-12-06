@@ -111,6 +111,22 @@ const MyCommute: React.FC = () => {
               </p>
             </div>
           </div>
+          <div className="width-2/3 flex justify-between items-center">
+            <div className="flex items-center">
+              <div className="bg-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold mr-2">
+                OL
+              </div>
+              <div>
+                <h3 className="text-sm">North to Oak Grove</h3>
+                <p className="text-gray-500 text-[10px]">Ruggles</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-2">
+              <p className="text-sm">
+                <span className="font-bold">10 </span>mins
+              </p>
+            </div>
+          </div>
 
           {/* Nearby Transit Lines Section */}
           <h2 className="text-lg font-bold mb-2">Nearby transit lines</h2>

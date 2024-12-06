@@ -10,6 +10,10 @@ import {
   faMusic,
   faBus,
   faInfoCircle,
+  faBook,
+  faWind,
+  faHeart,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
 const StressReliefActivities: React.FC = () => {
@@ -26,8 +30,8 @@ const StressReliefActivities: React.FC = () => {
           <FontAwesomeIcon icon={faCog} className="text-gray-500 text-2xl" />
         </div>
 
-        {/* Scrollable Content */}
-        <div className="flex-1 overflow-y-auto p-4">
+        {/* Scrollable Content- use overflow-y-auto */}
+        <div className="flex-1 p-4">
           {/* Title Section */}
           <div className="flex items-center mb-4">
             <div className="bg-purple-200 rounded-full p-3">
@@ -54,37 +58,40 @@ const StressReliefActivities: React.FC = () => {
 
           {/* Activities Grid */}
           <div className="grid grid-cols-2 gap-4 mb-4">
-            <div className="bg-purple-200 rounded-2xl p-3 flex flex-col items-center">
-              <img
-                src="https://placehold.co/50x50"
-                alt="Journaling icon"
-                className="mb-2"
+            {/* Journaling */}
+            <div className="bg-purple-200 rounded-2xl p-6 flex flex-col items-center">
+              <FontAwesomeIcon
+                icon={faBook}
+                className="text-purple-600 text-4xl mb-2"
               />
-              <p className="text-xs">JOURNALING</p>
+              <p className="text-sm font-semibold">JOURNALING</p>
             </div>
-            <div className="bg-purple-200 rounded-2xl p-3 flex flex-col items-center">
-              <img
-                src="https://placehold.co/50x50"
-                alt="Deep Breathing icon"
-                className="mb-2"
+
+            {/* Deep Breathing */}
+            <div className="bg-purple-200 rounded-2xl p-6 flex flex-col items-center">
+              <FontAwesomeIcon
+                icon={faWind}
+                className="text-purple-600 text-4xl mb-2"
               />
-              <p className="text-xs">DEEP BREATHING</p>
+              <p className="text-sm font-semibold">DEEP BREATHING</p>
             </div>
-            <div className="bg-purple-200 rounded-2xl p-3 flex flex-col items-center">
-              <img
-                src="https://placehold.co/50x50"
-                alt="Guided Mindfulness icon"
-                className="mb-auto"
+
+            {/* Guided Mindfulness */}
+            <div className="bg-purple-200 rounded-2xl p-6 flex flex-col items-center">
+              <FontAwesomeIcon
+                icon={faHeart}
+                className="text-purple-600 text-4xl mb-2"
               />
-              <p className="text-xs">GUIDED MINDFULNESS</p>
+              <p className="text-sm font-semibold">GUIDED MINDFULNESS</p>
             </div>
-            <div className="bg-purple-200 rounded-2xl p-3 flex flex-col items-center justify-between">
-              <img
-                src="https://placehold.co/50x50"
-                alt="Positive News icon"
-                className="mb-auto"
+
+            {/* Positive News */}
+            <div className="bg-purple-200 rounded-2xl p-6 flex flex-col items-center">
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className="text-purple-600 text-4xl mb-2"
               />
-              <p className="text-xs">POSITIVE NEWS</p>
+              <p className="text-sm font-semibold">POSITIVE NEWS</p>
             </div>
           </div>
 
