@@ -62,7 +62,7 @@ const HomeScreen: React.FC = () => {
                   GL
                 </div>
                 <div>
-                  <div className="font-bold text-sm">West to Health Street</div>
+                  <div className="font-bold text-sm">West to Heath Street</div>
                   <div className="text-gray-500 text-xs">
                     Northeastern University
                   </div>

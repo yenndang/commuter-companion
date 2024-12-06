@@ -22,7 +22,7 @@ const MyCommute: React.FC = () => {
   const [favoriteLines, setFavoriteLines] = useState<{
     [key: string]: boolean;
   }>({
-    "West to Health Street": false,
+    "West to Heath Street": false,
     "East to Medford/Tufts": true,
     "North to Oak Grove": true,
     "39 Forest Hills": false,
