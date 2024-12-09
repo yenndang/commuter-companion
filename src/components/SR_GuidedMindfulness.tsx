@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
   faCog,
-  faHeart,
+  faSpa,
   faInfoCircle,
   faPlayCircle,
 } from "@fortawesome/free-solid-svg-icons";
@@ -45,7 +45,7 @@ const GuidedMindfulness: React.FC = () => {
           <div className="flex items-center mb-4">
             <div className="bg-purple-200 rounded-full p-4 w-15 h-15 flex">
               <FontAwesomeIcon
-                icon={faHeart}
+                icon={faSpa}
                 className="text-purple-600 text-2xl"
               />
             </div>

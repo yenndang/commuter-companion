@@ -57,9 +57,10 @@ const StressReliefActivities: React.FC = () => {
           {/* Title Section */}
           <div className="flex items-center mb-4">
             <div className="bg-purple-200 rounded-full p-4 w-15 h-15 flex">
-              <FontAwesomeIcon
-                icon={faSpa}
-                className="text-purple-600 text-2xl"
+              <img
+                src="/images/stress-relief.svg"
+                alt="Stress"
+                className="w-6 h-6 transition-all duration-300"
               />
             </div>
             <h1 className="text-2xl font-bold ml-2">Stress Relief</h1>
@@ -89,7 +90,7 @@ const StressReliefActivities: React.FC = () => {
                 icon={faBook}
                 className="text-purple-600 text-4xl mb-2"
               />
-              <p className="text-sm font-semibold">JOURNALING</p>
+              <p className="text-sm font-semibold text-center">JOURNALING</p>
             </div>
 
             {/* Deep Breathing */}
@@ -101,7 +102,9 @@ const StressReliefActivities: React.FC = () => {
                 icon={faWind}
                 className="text-purple-600 text-4xl mb-2"
               />
-              <p className="text-sm font-semibold">DEEP BREATHING</p>
+              <p className="text-sm font-semibold text-center">
+                DEEP BREATHING
+              </p>
             </div>
 
             {/* Guided Mindfulness */}
@@ -110,10 +113,12 @@ const StressReliefActivities: React.FC = () => {
               onClick={handleGuidedMindfulnessClick} // Trigger navigate on click
             >
               <FontAwesomeIcon
-                icon={faHeart}
+                icon={faSpa}
                 className="text-purple-600 text-4xl mb-2"
               />
-              <p className="text-sm font-semibold">GUIDED MINDFULNESS</p>
+              <p className="text-sm font-semibold text-center">
+                GUIDED MINDFULNESS
+              </p>
             </div>
 
             {/* Positive News */}
@@ -125,7 +130,7 @@ const StressReliefActivities: React.FC = () => {
                 icon={faEnvelope}
                 className="text-purple-600 text-4xl mb-2"
               />
-              <p className="text-sm font-semibold">POSITIVE NEWS</p>
+              <p className="text-sm font-semibold text-center">POSITIVE NEWS</p>
             </div>
           </div>
 

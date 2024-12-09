@@ -54,9 +54,10 @@ const MyCommute: React.FC = () => {
           {/* Title Section */}
           <div className="flex items-center mb-4">
             <div className="bg-blue-200 rounded-full p-4 w-15 h-15 flex">
-              <FontAwesomeIcon
-                icon={faTrain}
-                className="text-blue-600 text-2xl"
+              <img
+                src="/images/commute.svg"
+                alt="Commute"
+                className="w-6 h-6 transition-all duration-300"
               />
             </div>
             <h1 className="text-2xl font-bold ml-2">MyCommute</h1>

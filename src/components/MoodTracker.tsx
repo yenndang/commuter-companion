@@ -44,9 +44,10 @@ const MoodTracker: React.FC = () => {
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center">
               <div className="bg-yellow-200 rounded-full p-4 w-15 h-15 flex">
-                <FontAwesomeIcon
-                  icon={faSmile}
-                  className="text-xl text-yellow-500"
+                <img
+                  src="/images/smiley.svg"
+                  alt="Mood"
+                  className="w-6 h-6 transition-all duration-300"
                 />
               </div>
               <h1 className="text-2xl font-bold ml-2">Mood Tracker</h1>

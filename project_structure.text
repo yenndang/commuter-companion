@@ -1,0 +1,44 @@
+- .DS_Store
+- .gitignore
+- README.md
+- package-lock.json
+- package.json
+- public
+  - favicon.ico
+  - images
+    - smiley.svg
+  - index.html
+  - logo192.png
+  - logo512.png
+  - manifest.json
+  - robots.txt
+- src
+  - App.css
+  - App.test.tsx
+  - App.tsx
+  - components
+    - HomeScreen.tsx
+    - MoodTracker.tsx
+    - MusicRecommendation.tsx
+    - MyCommute.tsx
+    - SR_DeepBreathing.tsx
+    - SR_GuidedMindfulness.tsx
+    - SR_Journaling.tsx
+    - SR_Journaling_Gratefulness.tsx
+    - SR_PositiveNews.tsx
+    - SettingsScreen.tsx
+    - StressRelief.tsx
+    - misc
+      - BackToHomeButton.tsx
+      - NavigationBar.tsx
+    - popup
+      - CompletionPopUp.tsx
+      - MusicFilterPopUp.tsx
+  - index.css
+  - index.tsx
+  - logo.svg
+  - react-app-env.d.ts
+  - reportWebVitals.ts
+  - setupTests.ts
+- tailwind.config.js
+- tsconfig.json

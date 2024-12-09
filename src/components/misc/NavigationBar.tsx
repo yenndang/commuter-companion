@@ -1,12 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faSmile,
-  faBolt,
-  faMusic,
-  faBus,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBolt, faMusic, faBus } from "@fortawesome/free-solid-svg-icons";
 
 const NavigationBar: React.FC = () => {
   return (
@@ -14,15 +9,31 @@ const NavigationBar: React.FC = () => {
       <NavLink
         to="/mood-tracker"
         className={({ isActive }) =>
-          isActive ? "text-yellow-500" : "text-gray-600"
+          isActive ? "text-gray-600" : "text-gray-600"
         }
       >
-        <div className="flex flex-col items-center">
-          <div className="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-md">
-            <FontAwesomeIcon icon={faSmile} className="text-xl" />
+        {({ isActive }) => (
+          <div className="flex flex-col items-center">
+            <div
+              className={`w-12 h-12 flex items-center justify-center rounded-lg shadow-md ${
+                isActive ? "bg-yellow-300" : "bg-white"
+              }`}
+            >
+              <img
+                src="/images/smiley.svg"
+                alt="Mood"
+                className="w-6 h-6 transition-all duration-300"
+              />
+            </div>
+            <p
+              className={`mt-1 text-[10px] ${
+                isActive ? "text-yellow-500" : "text-gray-600"
+              }`}
+            >
+              Mood
+            </p>
           </div>
-          <p className="mt-1 text-[10px]">Mood</p>
-        </div>
+        )}
       </NavLink>
 
       <NavLink
@@ -31,12 +42,28 @@ const NavigationBar: React.FC = () => {
           isActive ? "text-purple-500" : "text-gray-600"
         }
       >
-        <div className="flex flex-col items-center">
-          <div className="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-md">
-            <FontAwesomeIcon icon={faBolt} className="text-xl" />
+        {({ isActive }) => (
+          <div className="flex flex-col items-center">
+            <div
+              className={`w-12 h-12 flex items-center justify-center rounded-lg shadow-md ${
+                isActive ? "bg-purple-200" : "bg-white"
+              }`}
+            >
+              <img
+                src="/images/stress-relief.svg"
+                alt="Stress"
+                className="w-6 h-6 transition-all duration-300"
+              />
+            </div>
+            <p
+              className={`mt-1 text-[10px] ${
+                isActive ? "text-purple-500" : "text-gray-600"
+              }`}
+            >
+              Stress
+            </p>
           </div>
-          <p className="mt-1 text-[10px]">Stress</p>
-        </div>
+        )}
       </NavLink>
 
       <NavLink
@@ -45,12 +72,28 @@ const NavigationBar: React.FC = () => {
           isActive ? "text-pink-500" : "text-gray-600"
         }
       >
-        <div className="flex flex-col items-center">
-          <div className="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-md">
-            <FontAwesomeIcon icon={faMusic} className="text-xl" />
+        {({ isActive }) => (
+          <div className="flex flex-col items-center">
+            <div
+              className={`w-12 h-12 flex items-center justify-center rounded-lg shadow-md ${
+                isActive ? "bg-pink-200" : "bg-white"
+              }`}
+            >
+              <img
+                src="/images/music.svg"
+                alt="Music"
+                className="w-6 h-6 transition-all duration-300"
+              />
+            </div>
+            <p
+              className={`mt-1 text-[10px] ${
+                isActive ? "text-pink-500" : "text-gray-600"
+              }`}
+            >
+              Music
+            </p>
           </div>
-          <p className="mt-1 text-[10px]">Music</p>
-        </div>
+        )}
       </NavLink>
 
       <NavLink
@@ -59,12 +102,28 @@ const NavigationBar: React.FC = () => {
           isActive ? "text-blue-500" : "text-gray-600"
         }
       >
-        <div className="flex flex-col items-center">
-          <div className="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-md">
-            <FontAwesomeIcon icon={faBus} className="text-xl" />
+        {({ isActive }) => (
+          <div className="flex flex-col items-center">
+            <div
+              className={`w-12 h-12 flex items-center justify-center rounded-lg shadow-md ${
+                isActive ? "bg-blue-200" : "bg-white"
+              }`}
+            >
+              <img
+                src="/images/commute.svg"
+                alt="Commute"
+                className="w-6 h-6 transition-all duration-300"
+              />{" "}
+            </div>
+            <p
+              className={`mt-1 text-[10px] ${
+                isActive ? "text-blue-500" : "text-gray-600"
+              }`}
+            >
+              MyCommute
+            </p>
           </div>
-          <p className="mt-1 text-[10px]">MyCommute</p>
-        </div>
+        )}
       </NavLink>
     </div>
   );
