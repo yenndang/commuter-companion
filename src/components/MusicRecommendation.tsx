@@ -27,7 +27,7 @@ const MusicRecommendation: React.FC = () => {
       {/* Phone Container */}
       <div className="w-[300px] h-[650px] bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-300 flex flex-col relative">
         {/* Header */}
-        <div className="flex justify-between items-center p-4 bg-white z-10 sticky top-2">
+        <div className="flex justify-between items-center p-4 bg-white sticky top-0 z-10">
           <BackToHomeButton />
           <FontAwesomeIcon
             icon={faCog}

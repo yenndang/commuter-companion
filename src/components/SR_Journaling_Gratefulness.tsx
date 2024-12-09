@@ -42,7 +42,7 @@ const GratefulnessJournal: React.FC = () => {
       {/* Phone Container */}
       <div className="w-[300px] h-[650px] bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-300 flex flex-col">
         {/* Header */}
-        <div className="flex justify-between items-center p-4 bg-white z-10 sticky top-2">
+        <div className="flex justify-between items-center p-4 bg-white sticky top-0 z-10">
           <FontAwesomeIcon
             icon={faArrowLeft}
             className="text-gray-500 text-2xl cursor-pointer"
