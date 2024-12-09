@@ -38,7 +38,7 @@ const MusicRecommendation: React.FC = () => {
         <div className="flex-1  p-4">
           {/* Title Section */}
           <div className="flex items-center mb-4">
-            <div className="bg-pink-200 rounded-full p-3">
+            <div className="bg-pink-200 rounded-full p-4 w-15 h-15 flex">
               <FontAwesomeIcon
                 icon={faMusic}
                 className="text-pink-600 text-2xl"

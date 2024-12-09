@@ -59,7 +59,7 @@ const GratefulnessJournal: React.FC = () => {
         <div className="flex-1 p-4">
           {/* Title Section */}
           <div className="flex items-center mb-4">
-            <div className="bg-purple-200 p-4 rounded-full">
+            <div className="bg-purple-200 rounded-full p-4 w-15 h-15 flex">
               <FontAwesomeIcon
                 icon={faBook}
                 className="text-2xl text-purple-500"

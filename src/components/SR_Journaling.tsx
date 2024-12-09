@@ -44,7 +44,7 @@ const SRJournaling: React.FC = () => {
         <div className="flex-1 p-4">
           {/* Title Section */}
           <div className="flex items-center mb-4">
-            <div className="bg-purple-100 rounded-full p-3">
+            <div className="bg-purple-100 rounded-full p-4 w-15 h-15 flex">
               <FontAwesomeIcon
                 icon={faBook}
                 className="text-purple-400 text-3xl"
@@ -70,7 +70,7 @@ const SRJournaling: React.FC = () => {
           </div>
 
           {/* Journaling Prompts Grid */}
-          <div className="grid grid-cols-2 gap-3 mb-2">
+          <div className="grid grid-cols-2 gap-2">
             {/* Anxiety Dialogue */}
             <div className="flex flex-col items-center border-2 border-purple-400 rounded-lg p-2">
               <FontAwesomeIcon

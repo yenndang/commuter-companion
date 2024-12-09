@@ -53,7 +53,7 @@ const MyCommute: React.FC = () => {
         <div className="flex-1 overflow-y-auto p-4">
           {/* Title Section */}
           <div className="flex items-center mb-4">
-            <div className="bg-blue-200 rounded-full p-3">
+            <div className="bg-blue-200 rounded-full p-4 w-15 h-15 flex">
               <FontAwesomeIcon
                 icon={faTrain}
                 className="text-blue-600 text-2xl"
