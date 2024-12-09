@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
   faCog,
+  faInfoCircle,
   faSpa,
   faPen,
   faSmile,
   faHeartbeat,
   faMusic,
   faBus,
-  faInfoCircle,
   faBook,
   faWind,
   faHeart,
@@ -21,6 +21,11 @@ import BackToHomeButton from "./misc/BackToHomeButton";
 
 const StressReliefActivities: React.FC = () => {
   const navigate = useNavigate(); // Initialize navigate function
+
+  const handleDeepBreathingClick = () => {
+    navigate("/stress-relief/deep-breathing"); // Navigate to the SRDeepBreathing component
+  };
+
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
       {/* Phone Container */}
@@ -73,7 +78,10 @@ const StressReliefActivities: React.FC = () => {
             </div>
 
             {/* Deep Breathing */}
-            <div className="bg-purple-200 rounded-2xl p-6 flex flex-col items-center">
+            <div
+              className="bg-purple-200 rounded-2xl p-6 flex flex-col items-center cursor-pointer"
+              onClick={handleDeepBreathingClick} // Trigger navigate on click
+            >
               <FontAwesomeIcon
                 icon={faWind}
                 className="text-purple-600 text-4xl mb-2"

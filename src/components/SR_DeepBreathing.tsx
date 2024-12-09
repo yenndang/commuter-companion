@@ -5,10 +5,10 @@ import {
   faInfoCircle,
   faPlayCircle,
   faWind,
+  faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import NavigationBar from "./misc/NavigationBar";
 import { useNavigate } from "react-router-dom";
-import BackToHomeButton from "./misc/BackToHomeButton";
 import CompletionPopUp from "./popup/CompletionPopUp";
 
 const SRDeepBreathing: React.FC = () => {
@@ -26,7 +26,12 @@ const SRDeepBreathing: React.FC = () => {
       <div className="w-[300px] h-[650px] bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-300 flex flex-col relative">
         {/* Header */}
         <div className="flex justify-between items-center p-4 bg-white z-10 sticky top-2">
-          <BackToHomeButton />
+          <button
+            onClick={() => navigate("/stress-relief")} // Navigate back to StressRelief screen
+            className="text-gray-500 text-2xl cursor-pointer"
+          >
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </button>
           <FontAwesomeIcon
             icon={faCog}
             className="text-gray-500 text-2xl pt-1 cursor-pointer"
