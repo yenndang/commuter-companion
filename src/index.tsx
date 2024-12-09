@@ -10,11 +10,13 @@ import MusicRecommendation from "./components/MusicRecommendation";
 import MyCommute from "./components/MyCommute";
 import MoodTracker from "./components/MoodTracker";
 import SettingsScreen from "./components/SettingsScreen";
+import SRDeepBreathing from "./components/SR_DeepBreathing";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
+      <SRDeepBreathing />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
