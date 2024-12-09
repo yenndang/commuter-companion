@@ -17,6 +17,9 @@ import { useNavigate } from "react-router-dom";
 
 const SRJournaling: React.FC = () => {
   const navigate = useNavigate(); // Initialize navigate function
+  const handleGratefulnessClick = () => {
+    navigate("/stress-relief/journaling/gratefulness"); // Navigate to the GratefulnessJournal component
+  };
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
@@ -98,7 +101,10 @@ const SRJournaling: React.FC = () => {
             </div>
 
             {/* Gratefulness */}
-            <div className="flex flex-col items-center border-2 border-purple-400 rounded-lg p-2">
+            <div
+              className="flex flex-col items-center border-2 border-purple-400 rounded-lg p-2 cursor-pointer"
+              onClick={handleGratefulnessClick} // Trigger navigate on click
+            >
               <FontAwesomeIcon
                 icon={faPrayingHands}
                 className="text-purple-400 text-3xl mb-2"
