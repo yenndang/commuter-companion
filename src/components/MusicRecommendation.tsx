@@ -1,29 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
   faCog,
   faMusic,
   faInfoCircle,
-  faPlay,
-  faVolumeUp,
-  faSmile,
-  faBolt,
-  faBus,
-  faMicrophone,
   faPlayCircle,
+  faMicrophone,
   faSlidersH,
 } from "@fortawesome/free-solid-svg-icons";
 import NavigationBar from "./misc/NavigationBar";
-import { useNavigate } from "react-router-dom";
 import BackToHomeButton from "./misc/BackToHomeButton";
+import MusicFilterPopUp from "./popup/MusicFilterPopUp";
 
 const MusicRecommendation: React.FC = () => {
+  const [showFilter, setShowFilter] = useState(false); // State to toggle filter pop-up
   const navigate = useNavigate(); // Initialize navigate function
+
+  const handleFilterClick = () => {
+    setShowFilter(true); // Show the filter pop-up
+  };
+
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
       {/* Phone Container */}
-      <div className="w-[300px] h-[650px] bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-300 flex flex-col">
+      <div className="w-[300px] h-[650px] bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-300 flex flex-col relative">
         {/* Header */}
         <div className="flex justify-between items-center p-4 bg-white z-10 sticky top-2">
           <BackToHomeButton />
@@ -34,8 +36,8 @@ const MusicRecommendation: React.FC = () => {
           />
         </div>
 
-        {/* Scrollable Content if add "overflow-y-auto" */}
-        <div className="flex-1  p-4">
+        {/* Scrollable Content */}
+        <div className="flex-1 p-4">
           {/* Title Section */}
           <div className="flex items-center mb-4">
             <div className="bg-pink-200 rounded-full p-4 w-15 h-15 flex">
@@ -64,7 +66,10 @@ const MusicRecommendation: React.FC = () => {
             <p className="text-gray-400 text-[10px] w-[200px]">
               (Click the filter icon to update your preferences)
             </p>
-            <div className="bg-gray-200 w-8 h-8 flex items-center justify-center rounded-full shadow">
+            <div
+              className="bg-gray-200 w-8 h-8 flex items-center justify-center rounded-full shadow cursor-pointer"
+              onClick={handleFilterClick}
+            >
               <FontAwesomeIcon
                 icon={faSlidersH}
                 className="text-gray text-sm"
@@ -114,62 +119,6 @@ const MusicRecommendation: React.FC = () => {
                   className="text-2xl text-gray-500"
                 />
               </div>
-              {/* Playlist Item */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <FontAwesomeIcon
-                    icon={faMusic}
-                    className="text-xl text-gray-500"
-                  />
-                  <div className="ml-4">
-                    <div className="font-bold text-sm">2000's Pop Playlist</div>
-                    <div className="text-gray-400 text-xs">
-                      2 hours, 40 minutes
-                    </div>
-                  </div>
-                </div>
-                <FontAwesomeIcon
-                  icon={faPlayCircle}
-                  className="text-2xl text-gray-500"
-                />
-              </div>
-              {/* Podcast Item */}
-              {/* <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <FontAwesomeIcon
-                    icon={faMicrophone}
-                    className="text-xl text-gray-500"
-                  />
-                  <div className="ml-4">
-                    <div className="font-bold text-sm">Forever35</div>
-                    <div className="text-gray-400 text-xs">55 minutes</div>
-                  </div>
-                </div>
-                <FontAwesomeIcon
-                  icon={faPlayCircle}
-                  className="text-2xl text-gray-500"
-                />
-              </div> */}
-              {/* Playlist Item */}
-              {/* <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <FontAwesomeIcon
-                    icon={faMusic}
-                    className="text-xl text-gray-500"
-                  />
-                  <div className="ml-4">
-                    <div className="font-bold text-sm">Electro Pop</div>
-                    <div className="text-gray-400 text-xs">
-                      1 hours, 2 minutes
-                    </div>
-                  </div>
-                </div>
-                <FontAwesomeIcon
-                  icon={faPlayCircle}
-                  className="text-2xl text-gray-500"
-                />
-              </div> */}
-              {/* Add more items as needed */}
             </div>
           </div>
 
@@ -192,6 +141,14 @@ const MusicRecommendation: React.FC = () => {
         {/* Footer Navigation */}
         <NavigationBar />
       </div>
+
+      {/* Music Filter Pop-Up */}
+      {showFilter && (
+        <MusicFilterPopUp
+          onClose={() => setShowFilter(false)}
+          onSearch={(filters) => console.log(filters)} // Placeholder for search functionality
+        />
+      )}
     </div>
   );
 };

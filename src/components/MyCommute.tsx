@@ -72,7 +72,7 @@ const MyCommute: React.FC = () => {
               />
             </div>
           </div>
-          <div className="flex items-start text-[10px] mb-4">
+          <div className="flex items-start text-[10px] mb-2">
             <FontAwesomeIcon
               icon={faCircleExclamation}
               className="text-blue-600 text-sm mt-1 mr-2"
@@ -85,7 +85,7 @@ const MyCommute: React.FC = () => {
           </div>
 
           {/* Favorite Routes List */}
-          <div className="bg-white border rounded-lg p-3 mb-4">
+          <div className="bg-white border rounded-lg p-3 mb-2">
             <div className="flex justify-between items-center mb-2">
               <div className="flex items-center">
                 <div className="bg-green-800 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold mr-2">
@@ -116,7 +116,7 @@ const MyCommute: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="width-2/3 flex justify-between items-center">
+          <div className="width-2/3 flex justify-between items-center mb-2">
             <div className="flex items-center">
               <div className="bg-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold mr-2">
                 OL

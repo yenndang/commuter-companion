@@ -79,7 +79,7 @@ const StressReliefActivities: React.FC = () => {
           </div>
 
           {/* Activities Grid */}
-          <div className="grid grid-cols-2 gap-4 mb-4">
+          <div className="grid grid-cols-2 gap-2 mb-4">
             {/* Journaling */}
             <div
               className="bg-purple-200 rounded-2xl p-6 flex flex-col items-center cursor-pointer"
