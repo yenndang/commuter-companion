@@ -11,12 +11,13 @@ import MyCommute from "./components/MyCommute";
 import MoodTracker from "./components/MoodTracker";
 import SettingsScreen from "./components/SettingsScreen";
 import SRDeepBreathing from "./components/SR_DeepBreathing";
+import SRJournaling from "./components/SR_Journaling";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
-      <SRDeepBreathing />
+      <SRJournaling />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

@@ -26,6 +26,10 @@ const StressReliefActivities: React.FC = () => {
     navigate("/stress-relief/deep-breathing"); // Navigate to the SRDeepBreathing component
   };
 
+  const handleJournalingClick = () => {
+    navigate("/stress-relief/journaling"); // Navigate to the SRJournaling component
+  };
+
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
       {/* Phone Container */}
@@ -69,7 +73,10 @@ const StressReliefActivities: React.FC = () => {
           {/* Activities Grid */}
           <div className="grid grid-cols-2 gap-4 mb-4">
             {/* Journaling */}
-            <div className="bg-purple-200 rounded-2xl p-6 flex flex-col items-center">
+            <div
+              className="bg-purple-200 rounded-2xl p-6 flex flex-col items-center cursor-pointer"
+              onClick={handleJournalingClick} // Trigger navigate on click
+            >
               <FontAwesomeIcon
                 icon={faBook}
                 className="text-purple-600 text-4xl mb-2"

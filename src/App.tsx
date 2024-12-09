@@ -7,6 +7,7 @@ import StressRelief from "./components/StressRelief";
 import MusicRecommendation from "./components/MusicRecommendation";
 import SettingsScreen from "./components/SettingsScreen";
 import SRDeepBreathing from "./components/SR_DeepBreathing";
+import SRJournaling from "./components/SR_Journaling";
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
         path="/stress-relief/deep-breathing"
         element={<SRDeepBreathing />}
       />
+      <Route path="/stress-relief/journaling" element={<SRJournaling />} />
       <Route path="/music-recommendation" element={<MusicRecommendation />} />
       <Route path="/settings" element={<SettingsScreen />} />
     </Routes>
