@@ -30,6 +30,10 @@ const StressReliefActivities: React.FC = () => {
     navigate("/stress-relief/journaling"); // Navigate to the SRJournaling component
   };
 
+  const handleGuidedMindfulnessClick = () => {
+    navigate("/stress-relief/guided-mindfulness"); // Navigate to the GuidedMindfulness component
+  };
+
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
       {/* Phone Container */}
@@ -97,7 +101,10 @@ const StressReliefActivities: React.FC = () => {
             </div>
 
             {/* Guided Mindfulness */}
-            <div className="bg-purple-200 rounded-2xl p-6 flex flex-col items-center">
+            <div
+              className="bg-purple-200 rounded-2xl p-6 flex flex-col items-center cursor-pointer"
+              onClick={handleGuidedMindfulnessClick} // Trigger navigate on click
+            >
               <FontAwesomeIcon
                 icon={faHeart}
                 className="text-purple-600 text-4xl mb-2"

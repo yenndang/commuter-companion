@@ -12,12 +12,13 @@ import MoodTracker from "./components/MoodTracker";
 import SettingsScreen from "./components/SettingsScreen";
 import SRDeepBreathing from "./components/SR_DeepBreathing";
 import SRJournaling from "./components/SR_Journaling";
+import GuidedMindfulness from "./components/SR_GuidedMindfulness";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
-      <SRJournaling />
+      <GuidedMindfulness />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
