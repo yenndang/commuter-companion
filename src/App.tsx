@@ -10,6 +10,7 @@ import SRDeepBreathing from "./components/SR_DeepBreathing";
 import SRJournaling from "./components/SR_Journaling";
 import GratefulnessJournal from "./components/SR_Journaling_Gratefulness";
 import GuidedMindfulness from "./components/SR_GuidedMindfulness";
+import PositiveNews from "./components/SR_PositiveNews";
 
 const App: React.FC = () => {
   return (
@@ -31,6 +32,7 @@ const App: React.FC = () => {
         path="stress-relief/guided-mindfulness"
         element={<GuidedMindfulness />}
       />
+      <Route path="/stress-relief/positive-news" element={<PositiveNews />} />
       <Route path="/music-recommendation" element={<MusicRecommendation />} />
       <Route path="/settings" element={<SettingsScreen />} />
     </Routes>
